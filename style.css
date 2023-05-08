@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "PixelCode";
+    src: url("fonts/VT323-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Pixelated";
+    src: url("fonts/PressStart2P-Regular.ttf");
+}
+
+body {
+    background-color: #1f1f1f;
+}
+
+.pixel-code {
+    font-family: "PixelCode", sans-serif;
+}
+
+.home-title {
+    position: relative;
+    top: 10%;
+    font-size: 250%;
+    color: #e4ecff;
+    filter: drop-shadow(0px 0px 2.5px #ffffff59);
+    text-align: center;
+}
+
+.navbar {
+    width: 100%;
+    height: 5%;
+    text-align: center;
+}
+
+.navbar-button {
+    background-color: #ffffff00;
+    border-width: 0px;
+    font-size: larger;
+    cursor: pointer;
+    color: #ff8c34c9;
+    filter: drop-shadow(0px 0px 5px #ff8c34ad);
+    font-family: "Pixelated", sans-serif;
+    text-align: center;
+    padding-left: 50px;
+}
+
+.navbar-button:hover {
+    color: #ff8c349e;
+    filter: drop-shadow(0px 0px 5px #ff8c348b);
+}
+
+.project-list {
+    font-family: "Pixelated", sans-serif;
+    color: #ffffffb7;
+    position: relative;
+    text-align: center;
+    top: 10%;
+    font-size: 20px;
+}
