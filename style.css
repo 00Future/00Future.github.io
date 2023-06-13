@@ -1,0 +1,95 @@
+@font-face {
+    font-family: code;
+    src: url(src/fonts/code.ttf);
+}
+
+@font-face {
+    font-family: press-start;
+    src: url(src/fonts/press-start.ttf);
+}
+
+@font-face {
+    font-family: vt303;
+    src: url(src/fonts/vt303.ttf);
+}
+
+body {
+    background-color: #000000;
+    overflow-y:hidden;
+}
+
+.navbar {
+    width: 100%;
+    height: 7.5%;
+}
+
+.navbar-item {
+    transition: 0.05s;
+}
+
+.button {
+    background-color: #252525;
+    border-radius: 5px;
+    border-width: 0;
+    width: 7.5%;
+    height: 75%;
+    color: #a83508;
+    font-size: 115%;
+    cursor: pointer;
+    transition: 0.1s;
+    font-family: code;
+}
+
+.button:hover {
+    background-color: #141414;
+}
+
+.title {
+    color: #fff;
+    left: 22.5%;
+    position: absolute;
+    top: 15%;
+    font-size: 20px;
+    font-family: code;
+    width: 50%;
+    text-align: center;
+}
+
+.list-thing {
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    background-color: #ffffff00;
+    width: 80%;
+    height: 100%;
+}
+
+.list-item-1 {
+    width: 100%;
+    height: 7.5%;
+    background-color: #161616;
+    border-width: 0;
+    cursor: pointer;
+    color: #ffffff83;
+    font-size: 20px;
+    font-family: code;
+    text-align: left;
+    transition: 0.1s;
+    border-radius: 5px;
+}
+
+.list-item-1:hover {
+    background-color: #0c0c0c;
+}
+
+.list-item-2 {
+    width: 100%;
+    height: 7.5%;
+    background-color: #383838;
+    border-width: 0;
+    cursor: pointer;
+    color: #ffffff83;
+    font-size: 20px;
+    font-family: code;
+    text-align: left;
+}
