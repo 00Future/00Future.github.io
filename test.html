@@ -1,0 +1,72 @@
+<html>
+    
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="player-title" style="background-color: #172236;"><h3 id="username-text" style="position: relative;top: 25%;">@ObliviousFuture</h3></div>
+        <div class="player-title" style="top:17.5%;background-color: #172236;height: 35%;align-items: center;"><img id="avatar-image" style="width: 100%;filter: drop-shadow(0px 0px 5px #090e16);" src="images/template.png" alt="Thumbnail"></div>
+        <div class="player-title" style="background-color: #172236;top: 17.5%;height: 7.5%;"><h3 id="rap-text" style="position: relative;top: 32.5%;">RAP: 28,282</h3></div>
+    
+        <div style="display:unset;" class="notification-top" id="error-notification">User is private/terminated</div>
+
+        <div class="item-container">
+            <div class="item-contained">
+                <h1 class="item-contained-title">Perfectly Legitimate Business Hat</h1>
+                <img src="images/template_item.png" alt="" class="item-contained-image">
+
+                <h1 class="item-contained-rap">RAP</h1>
+                <h1 style="text-align: right;color: #2eff23;filter: drop-shadow(0px 0px 5px #00ff1a71);" id="rap" class="item-contained-rap">69,420</h1>
+                
+                <h1 style="top: 85%;" class="item-contained-rap">Value</h1>
+                <h1 style="top: 85%;text-align: right;color: #009dff;filter: drop-shadow(0px 0px 5px #00c3ff8e);" id="rap" class="item-contained-rap">70,000</h1>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        var doMain = true;
+
+        function requestUrl(url) {
+            fetch(""+url, {
+                method: "GET",
+                headers: {
+                  "accept": "application/json"
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                return data;
+            })
+            .catch(error => {
+                console.error(error);
+            });
+        }
+
+        function getCollectibles(userId) {
+            var collectibles = requestUrl("https://inventory.roblox.com/v1/users/"+toString(userId)+"/assets/collectibles?limit=50&sortOrder=Asc");
+            console.log(collectibles);
+        }
+
+        if (doMain == true) {
+
+            var usernameThing = document.getElementById("username-text");
+            var avatarThing = document.getElementById("avatar-image");
+            var rapThing = document.getElementById("rap-text");
+
+            var queryParams = new URLSearchParams(window.location.search);
+            var userId = queryParams.get("id");
+
+            var inventoryPublic = false;
+
+            if (userId) {
+                // Check if inventory is public
+                // console.log(requestUrl("https://inventory.roblox.com/v1/users/"+userId+"/can-view-inventory")["canView"])
+                getCollectibles();
+            }
+
+        }
+    </script>
+</html>
